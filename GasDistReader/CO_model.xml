@@ -1,0 +1,1574 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<model>
+
+  <CylindricalProfile type="Generic">
+    <name>Arm1</name>
+    <PlaneProfile intent="PlaneDensity" type="Arm">
+      <name>Arm1</name>
+      <armfunction>Gaussian</armfunction>
+      <variable id="norm">
+        <value>0.526987</value>
+        <step>0.007143</step>
+        <min>0</min>
+        <name>CO_Arm1_norm</name>
+      </variable>
+      <variable id="a">
+        <value>3.33783</value>
+        <step>7.97832e-05</step>
+        <min>3</min>
+        <max>8</max>
+        <prior>UNIFORM</prior>
+        <pval1>3</pval1>
+        <pval2>8</pval2>
+      </variable>
+      <variable id="rMin">
+        <value>2.03805</value>
+        <step>7.54642e-05</step>
+        <min>1.5</min>
+        <max>5</max>
+        <prior>UNIFORM</prior>
+        <pval1>1.5</pval1>
+        <pval2>5</pval2>
+      </variable>
+      <variable id="phiMin">
+        <value>1.05</value>
+      </variable>
+      <variable id="width">
+        <value>0.6</value>
+      </variable>
+      <variable id="rMax">
+        <value>50</value>
+      </variable>
+      <RadialProfile type="ExpHole">
+        <name>CO_Radial</name>
+        <variable id="R0">
+          <value>1.12804</value>
+          <step>0.000725513</step>
+          <min>0</min>
+        </variable>
+        <variable id="Rs">
+          <value>8</value>
+        </variable>
+        <variable id="Rh">
+          <value>6.43578</value>
+          <step>0.00157097</step>
+          <min>0</min>
+        </variable>
+        <variable id="hi">
+          <value>7.30415</value>
+          <step>0.00698162</step>
+          <min>0</min>
+        </variable>
+      </RadialProfile>
+    </PlaneProfile>
+    <PlaneProfile intent="PlaneCenter" type="NMode">
+      <name>DiskPlane</name>
+      <numberOfModes>3</numberOfModes>
+      <variable id="norm1">
+        <value>1</value>
+      </variable>
+      <variable id="norm2">
+        <value>1</value>
+      </variable>
+      <variable id="norm3">
+        <value>1</value>
+      </variable>
+      <variable id="zero2">
+        <value>1.47548</value>
+        <step>0.000114543</step>
+        <min>-2</min>
+        <max>8</max>
+        <prior>UNIFORM</prior>
+        <pval1>-2</pval1>
+        <pval2>8</pval2>
+      </variable>
+      <variable id="zero3">
+        <value>2.76487</value>
+        <step>0.000592321</step>
+        <min>-2</min>
+        <max>8</max>
+        <prior>UNIFORM</prior>
+        <pval1>-2</pval1>
+        <pval2>8</pval2>
+      </variable>
+      <RadialProfile intent="Norm1" type="Spline">
+        <name>Plane1Mode</name>
+        <interpolationType>CSPLINE</interpolationType>
+        <numberOfPoints>6</numberOfPoints>
+        <variable id="radius_00">
+          <value>0</value>
+        </variable>
+        <variable id="value_00">
+          <value>-0.0631513</value>
+          <step>0.000149232</step>
+        </variable>
+        <variable id="radius_01">
+          <value>5</value>
+        </variable>
+        <variable id="value_01">
+          <value>-0.00767916</value>
+          <step>2.31444e-05</step>
+        </variable>
+        <variable id="radius_02">
+          <value>10</value>
+        </variable>
+        <variable id="value_02">
+          <value>-0.0285536</value>
+          <step>2.41105e-05</step>
+        </variable>
+        <variable id="radius_03">
+          <value>15</value>
+        </variable>
+        <variable id="value_03">
+          <value>0.0562734</value>
+          <step>6.75116e-05</step>
+        </variable>
+        <variable id="radius_04">
+          <value>20</value>
+        </variable>
+        <variable id="value_04">
+          <value>0.764476</value>
+          <step>0.000310787</step>
+        </variable>
+        <variable id="radius_05">
+          <value>50</value>
+        </variable>
+        <variable id="value_05">
+          <value>20</value>
+          <step>0.000143604</step>
+          <min>-20</min>
+          <max>20</max>
+          <prior>UNIFORM</prior>
+          <pval1>-20</pval1>
+          <pval2>20</pval2>
+        </variable>
+      </RadialProfile>
+      <RadialProfile intent="Norm2" type="Spline">
+        <name>Plane2Mode</name>
+        <interpolationType>CSPLINE</interpolationType>
+        <numberOfPoints>6</numberOfPoints>
+        <variable id="radius_00">
+          <value>0</value>
+        </variable>
+        <variable id="value_00">
+          <value>-0.117265</value>
+          <step>0.000239522</step>
+        </variable>
+        <variable id="radius_01">
+          <value>5</value>
+        </variable>
+        <variable id="value_01">
+          <value>0.0517391</value>
+          <step>4.08389e-05</step>
+        </variable>
+        <variable id="radius_02">
+          <value>10</value>
+        </variable>
+        <variable id="value_02">
+          <value>-0.101549</value>
+          <step>6.11337e-05</step>
+        </variable>
+        <variable id="radius_03">
+          <value>15</value>
+        </variable>
+        <variable id="value_03">
+          <value>-0.737641</value>
+          <step>9.39895e-05</step>
+        </variable>
+        <variable id="radius_04">
+          <value>20</value>
+        </variable>
+        <variable id="value_04">
+          <value>-1.69437</value>
+          <step>0.000473708</step>
+        </variable>
+        <variable id="radius_05">
+          <value>50</value>
+        </variable>
+        <variable id="value_05">
+          <value>-20</value>
+          <step>0.000245558</step>
+          <min>-20</min>
+          <max>20</max>
+          <prior>UNIFORM</prior>
+          <pval1>-20</pval1>
+          <pval2>20</pval2>
+        </variable>
+      </RadialProfile>
+      <RadialProfile intent="Norm3" type="Spline">
+        <name>Plane3Mode</name>
+        <interpolationType>CSPLINE</interpolationType>
+        <numberOfPoints>6</numberOfPoints>
+        <variable id="radius_00">
+          <value>0</value>
+        </variable>
+        <variable id="value_00">
+          <value>0.26564</value>
+          <step>0.000274292</step>
+        </variable>
+        <variable id="radius_01">
+          <value>5</value>
+        </variable>
+        <variable id="value_01">
+          <value>-0.0213707</value>
+          <step>3.76464e-05</step>
+        </variable>
+        <variable id="radius_02">
+          <value>10</value>
+        </variable>
+        <variable id="value_02">
+          <value>-0.00681474</value>
+          <step>3.12766e-05</step>
+        </variable>
+        <variable id="radius_03">
+          <value>15</value>
+        </variable>
+        <variable id="value_03">
+          <value>-0.00494624</value>
+          <step>7.17502e-05</step>
+        </variable>
+        <variable id="radius_04">
+          <value>20</value>
+        </variable>
+        <variable id="value_04">
+          <value>0.570304</value>
+          <step>0.000454656</step>
+        </variable>
+        <variable id="radius_05">
+          <value>50</value>
+        </variable>
+        <variable id="value_05">
+          <value>15.5518</value>
+          <step>0.0346376</step>
+          <min>-20</min>
+          <max>20</max>
+          <prior>UNIFORM</prior>
+          <pval1>-20</pval1>
+          <pval2>20</pval2>
+        </variable>
+      </RadialProfile>
+      <RadialProfile intent="Zero2" type="Constant">
+        <name>Zero2Plane</name>
+      </RadialProfile>
+      <RadialProfile intent="Zero3" type="Constant">
+        <name>Zero3Plane</name>
+      </RadialProfile>
+    </PlaneProfile>
+    <PlaneProfile intent="NorthScaleHeight" type="1Mode">
+      <name>ScaleHeight</name>
+      <variable id="norm">
+        <value>9.90944</value>
+        <step>0.00738603</step>
+        <min>0</min>
+        <name>CO_scale</name>
+      </variable>
+      <RadialProfile type="Exponential">
+        <name>ScaleRadial</name>
+        <variable id="R0">
+          <value>6.93695</value>
+          <step>0.000509431</step>
+          <min>0</min>
+          <max>50</max>
+          <prior>UNIFORM</prior>
+          <pval1>0</pval1>
+          <pval2>50</pval2>
+        </variable>
+        <variable id="RS">
+          <value>8.5</value>
+        </variable>
+      </RadialProfile>
+    </PlaneProfile>
+    <PlaneProfile intent="SouthScaleHeight" type="1Mode">
+      <name>ScaleHeight</name>
+      <variable id="norm">
+        <value>9.90944</value>
+        <step>0.00738603</step>
+        <min>0</min>
+        <name>CO_scale</name>
+      </variable>
+      <RadialProfile type="Exponential">
+        <name>ScaleRadial</name>
+        <variable id="R0">
+          <value>6.93695</value>
+          <step>0.000509431</step>
+          <min>0</min>
+          <max>50</max>
+          <prior>UNIFORM</prior>
+          <pval1>0</pval1>
+          <pval2>50</pval2>
+        </variable>
+        <variable id="RS">
+          <value>8.5</value>
+        </variable>
+      </RadialProfile>
+    </PlaneProfile>
+    <northScaleFunction>Sech2</northScaleFunction>
+    <southScaleFunction>Sech2</southScaleFunction>
+  </CylindricalProfile>
+
+  <CylindricalProfile type="Generic">
+    <name>Arm2</name>
+    <PlaneProfile intent="PlaneDensity" type="Arm">
+      <name>Arm2</name>
+      <armfunction>Gaussian</armfunction>
+      <variable id="norm">
+        <value>6.10118e-08</value>
+        <step>1.08145e-05</step>
+        <min>0</min>
+        <name>CO_Arm2_norm</name>
+      </variable>
+      <variable id="a">
+        <value>4.36017</value>
+        <step>0.000110903</step>
+        <min>3</min>
+        <max>8</max>
+        <prior>UNIFORM</prior>
+        <pval1>3</pval1>
+        <pval2>8</pval2>
+      </variable>
+      <variable id="rMin">
+        <value>3.31587</value>
+        <step>7.24017e-05</step>
+        <min>1.5</min>
+        <max>5</max>
+        <prior>UNIFORM</prior>
+        <pval1>1.5</pval1>
+        <pval2>5</pval2>
+      </variable>
+      <variable id="phiMin">
+        <value>2.62</value>
+      </variable>
+      <variable id="width">
+        <value>0.6</value>
+      </variable>
+      <variable id="rMax">
+        <value>50</value>
+      </variable>
+      <RadialProfile type="ExpHole">
+        <name>CO_Radial</name>
+        <variable id="R0">
+          <value>1.12804</value>
+          <step>0.000725513</step>
+          <min>0</min>
+        </variable>
+        <variable id="Rs">
+          <value>8</value>
+        </variable>
+        <variable id="Rh">
+          <value>6.43578</value>
+          <step>0.00157097</step>
+          <min>0</min>
+        </variable>
+        <variable id="hi">
+          <value>7.30415</value>
+          <step>0.00698162</step>
+          <min>0</min>
+        </variable>
+      </RadialProfile>
+    </PlaneProfile>
+    <PlaneProfile intent="PlaneCenter" type="NMode">
+      <name>DiskPlane</name>
+      <numberOfModes>3</numberOfModes>
+      <variable id="norm1">
+        <value>1</value>
+      </variable>
+      <variable id="norm2">
+        <value>1</value>
+      </variable>
+      <variable id="norm3">
+        <value>1</value>
+      </variable>
+      <variable id="zero2">
+        <value>1.47548</value>
+        <step>0.000114543</step>
+        <min>-2</min>
+        <max>8</max>
+        <prior>UNIFORM</prior>
+        <pval1>-2</pval1>
+        <pval2>8</pval2>
+      </variable>
+      <variable id="zero3">
+        <value>2.76487</value>
+        <step>0.000592321</step>
+        <min>-2</min>
+        <max>8</max>
+        <prior>UNIFORM</prior>
+        <pval1>-2</pval1>
+        <pval2>8</pval2>
+      </variable>
+      <RadialProfile intent="Norm1" type="Spline">
+        <name>Plane1Mode</name>
+        <interpolationType>CSPLINE</interpolationType>
+        <numberOfPoints>6</numberOfPoints>
+        <variable id="radius_00">
+          <value>0</value>
+        </variable>
+        <variable id="value_00">
+          <value>-0.0631513</value>
+          <step>0.000149232</step>
+        </variable>
+        <variable id="radius_01">
+          <value>5</value>
+        </variable>
+        <variable id="value_01">
+          <value>-0.00767916</value>
+          <step>2.31444e-05</step>
+        </variable>
+        <variable id="radius_02">
+          <value>10</value>
+        </variable>
+        <variable id="value_02">
+          <value>-0.0285536</value>
+          <step>2.41105e-05</step>
+        </variable>
+        <variable id="radius_03">
+          <value>15</value>
+        </variable>
+        <variable id="value_03">
+          <value>0.0562734</value>
+          <step>6.75116e-05</step>
+        </variable>
+        <variable id="radius_04">
+          <value>20</value>
+        </variable>
+        <variable id="value_04">
+          <value>0.764476</value>
+          <step>0.000310787</step>
+        </variable>
+        <variable id="radius_05">
+          <value>50</value>
+        </variable>
+        <variable id="value_05">
+          <value>20</value>
+          <step>0.000143604</step>
+          <min>-20</min>
+          <max>20</max>
+          <prior>UNIFORM</prior>
+          <pval1>-20</pval1>
+          <pval2>20</pval2>
+        </variable>
+      </RadialProfile>
+      <RadialProfile intent="Norm2" type="Spline">
+        <name>Plane2Mode</name>
+        <interpolationType>CSPLINE</interpolationType>
+        <numberOfPoints>6</numberOfPoints>
+        <variable id="radius_00">
+          <value>0</value>
+        </variable>
+        <variable id="value_00">
+          <value>-0.117265</value>
+          <step>0.000239522</step>
+        </variable>
+        <variable id="radius_01">
+          <value>5</value>
+        </variable>
+        <variable id="value_01">
+          <value>0.0517391</value>
+          <step>4.08389e-05</step>
+        </variable>
+        <variable id="radius_02">
+          <value>10</value>
+        </variable>
+        <variable id="value_02">
+          <value>-0.101549</value>
+          <step>6.11337e-05</step>
+        </variable>
+        <variable id="radius_03">
+          <value>15</value>
+        </variable>
+        <variable id="value_03">
+          <value>-0.737641</value>
+          <step>9.39895e-05</step>
+        </variable>
+        <variable id="radius_04">
+          <value>20</value>
+        </variable>
+        <variable id="value_04">
+          <value>-1.69437</value>
+          <step>0.000473708</step>
+        </variable>
+        <variable id="radius_05">
+          <value>50</value>
+        </variable>
+        <variable id="value_05">
+          <value>-20</value>
+          <step>0.000245558</step>
+          <min>-20</min>
+          <max>20</max>
+          <prior>UNIFORM</prior>
+          <pval1>-20</pval1>
+          <pval2>20</pval2>
+        </variable>
+      </RadialProfile>
+      <RadialProfile intent="Norm3" type="Spline">
+        <name>Plane3Mode</name>
+        <interpolationType>CSPLINE</interpolationType>
+        <numberOfPoints>6</numberOfPoints>
+        <variable id="radius_00">
+          <value>0</value>
+        </variable>
+        <variable id="value_00">
+          <value>0.26564</value>
+          <step>0.000274292</step>
+        </variable>
+        <variable id="radius_01">
+          <value>5</value>
+        </variable>
+        <variable id="value_01">
+          <value>-0.0213707</value>
+          <step>3.76464e-05</step>
+        </variable>
+        <variable id="radius_02">
+          <value>10</value>
+        </variable>
+        <variable id="value_02">
+          <value>-0.00681474</value>
+          <step>3.12766e-05</step>
+        </variable>
+        <variable id="radius_03">
+          <value>15</value>
+        </variable>
+        <variable id="value_03">
+          <value>-0.00494624</value>
+          <step>7.17502e-05</step>
+        </variable>
+        <variable id="radius_04">
+          <value>20</value>
+        </variable>
+        <variable id="value_04">
+          <value>0.570304</value>
+          <step>0.000454656</step>
+        </variable>
+        <variable id="radius_05">
+          <value>50</value>
+        </variable>
+        <variable id="value_05">
+          <value>15.5518</value>
+          <step>0.0346376</step>
+          <min>-20</min>
+          <max>20</max>
+          <prior>UNIFORM</prior>
+          <pval1>-20</pval1>
+          <pval2>20</pval2>
+        </variable>
+      </RadialProfile>
+      <RadialProfile intent="Zero2" type="Constant">
+        <name>Zero2Plane</name>
+      </RadialProfile>
+      <RadialProfile intent="Zero3" type="Constant">
+        <name>Zero3Plane</name>
+      </RadialProfile>
+    </PlaneProfile>
+    <PlaneProfile intent="NorthScaleHeight" type="1Mode">
+      <name>ScaleHeight</name>
+      <variable id="norm">
+        <value>9.90944</value>
+        <step>0.00738603</step>
+        <min>0</min>
+        <name>CO_scale</name>
+      </variable>
+      <RadialProfile type="Exponential">
+        <name>ScaleRadial</name>
+        <variable id="R0">
+          <value>6.93695</value>
+          <step>0.000509431</step>
+          <min>0</min>
+          <max>50</max>
+          <prior>UNIFORM</prior>
+          <pval1>0</pval1>
+          <pval2>50</pval2>
+        </variable>
+        <variable id="RS">
+          <value>8.5</value>
+        </variable>
+      </RadialProfile>
+    </PlaneProfile>
+    <PlaneProfile intent="SouthScaleHeight" type="1Mode">
+      <name>ScaleHeight</name>
+      <variable id="norm">
+        <value>9.90944</value>
+        <step>0.00738603</step>
+        <min>0</min>
+        <name>CO_scale</name>
+      </variable>
+      <RadialProfile type="Exponential">
+        <name>ScaleRadial</name>
+        <variable id="R0">
+          <value>6.93695</value>
+          <step>0.000509431</step>
+          <min>0</min>
+          <max>50</max>
+          <prior>UNIFORM</prior>
+          <pval1>0</pval1>
+          <pval2>50</pval2>
+        </variable>
+        <variable id="RS">
+          <value>8.5</value>
+        </variable>
+      </RadialProfile>
+    </PlaneProfile>
+    <northScaleFunction>Sech2</northScaleFunction>
+    <southScaleFunction>Sech2</southScaleFunction>
+  </CylindricalProfile>
+
+  <CylindricalProfile type="Generic">
+    <name>Arm3</name>
+    <PlaneProfile intent="PlaneDensity" type="Arm">
+      <name>Arm3</name>
+      <armfunction>Gaussian</armfunction>
+      <variable id="norm">
+        <value>3.1493</value>
+        <step>0.00555152</step>
+        <min>0</min>
+        <name>CO_Arm3_norm</name>
+      </variable>
+      <variable id="a">
+        <value>5.36672</value>
+        <step>0.000531969</step>
+        <min>3</min>
+        <max>8</max>
+        <prior>UNIFORM</prior>
+        <pval1>3</pval1>
+        <pval2>8</pval2>
+      </variable>
+      <variable id="rMin">
+        <value>3.94189</value>
+        <step>0.000376155</step>
+        <min>1.5</min>
+        <max>5</max>
+        <prior>UNIFORM</prior>
+        <pval1>1.5</pval1>
+        <pval2>5</pval2>
+      </variable>
+      <variable id="phiMin">
+        <value>4.19</value>
+      </variable>
+      <variable id="width">
+        <value>0.6</value>
+      </variable>
+      <variable id="rMax">
+        <value>50</value>
+      </variable>
+      <RadialProfile type="ExpHole">
+        <name>CO_Radial</name>
+        <variable id="R0">
+          <value>1.12804</value>
+          <step>0.000725513</step>
+          <min>0</min>
+        </variable>
+        <variable id="Rs">
+          <value>8</value>
+        </variable>
+        <variable id="Rh">
+          <value>6.43578</value>
+          <step>0.00157097</step>
+          <min>0</min>
+        </variable>
+        <variable id="hi">
+          <value>7.30415</value>
+          <step>0.00698162</step>
+          <min>0</min>
+        </variable>
+      </RadialProfile>
+    </PlaneProfile>
+    <PlaneProfile intent="PlaneCenter" type="NMode">
+      <name>DiskPlane</name>
+      <numberOfModes>3</numberOfModes>
+      <variable id="norm1">
+        <value>1</value>
+      </variable>
+      <variable id="norm2">
+        <value>1</value>
+      </variable>
+      <variable id="norm3">
+        <value>1</value>
+      </variable>
+      <variable id="zero2">
+        <value>1.47548</value>
+        <step>0.000114543</step>
+        <min>-2</min>
+        <max>8</max>
+        <prior>UNIFORM</prior>
+        <pval1>-2</pval1>
+        <pval2>8</pval2>
+      </variable>
+      <variable id="zero3">
+        <value>2.76487</value>
+        <step>0.000592321</step>
+        <min>-2</min>
+        <max>8</max>
+        <prior>UNIFORM</prior>
+        <pval1>-2</pval1>
+        <pval2>8</pval2>
+      </variable>
+      <RadialProfile intent="Norm1" type="Spline">
+        <name>Plane1Mode</name>
+        <interpolationType>CSPLINE</interpolationType>
+        <numberOfPoints>6</numberOfPoints>
+        <variable id="radius_00">
+          <value>0</value>
+        </variable>
+        <variable id="value_00">
+          <value>-0.0631513</value>
+          <step>0.000149232</step>
+        </variable>
+        <variable id="radius_01">
+          <value>5</value>
+        </variable>
+        <variable id="value_01">
+          <value>-0.00767916</value>
+          <step>2.31444e-05</step>
+        </variable>
+        <variable id="radius_02">
+          <value>10</value>
+        </variable>
+        <variable id="value_02">
+          <value>-0.0285536</value>
+          <step>2.41105e-05</step>
+        </variable>
+        <variable id="radius_03">
+          <value>15</value>
+        </variable>
+        <variable id="value_03">
+          <value>0.0562734</value>
+          <step>6.75116e-05</step>
+        </variable>
+        <variable id="radius_04">
+          <value>20</value>
+        </variable>
+        <variable id="value_04">
+          <value>0.764476</value>
+          <step>0.000310787</step>
+        </variable>
+        <variable id="radius_05">
+          <value>50</value>
+        </variable>
+        <variable id="value_05">
+          <value>20</value>
+          <step>0.000143604</step>
+          <min>-20</min>
+          <max>20</max>
+          <prior>UNIFORM</prior>
+          <pval1>-20</pval1>
+          <pval2>20</pval2>
+        </variable>
+      </RadialProfile>
+      <RadialProfile intent="Norm2" type="Spline">
+        <name>Plane2Mode</name>
+        <interpolationType>CSPLINE</interpolationType>
+        <numberOfPoints>6</numberOfPoints>
+        <variable id="radius_00">
+          <value>0</value>
+        </variable>
+        <variable id="value_00">
+          <value>-0.117265</value>
+          <step>0.000239522</step>
+        </variable>
+        <variable id="radius_01">
+          <value>5</value>
+        </variable>
+        <variable id="value_01">
+          <value>0.0517391</value>
+          <step>4.08389e-05</step>
+        </variable>
+        <variable id="radius_02">
+          <value>10</value>
+        </variable>
+        <variable id="value_02">
+          <value>-0.101549</value>
+          <step>6.11337e-05</step>
+        </variable>
+        <variable id="radius_03">
+          <value>15</value>
+        </variable>
+        <variable id="value_03">
+          <value>-0.737641</value>
+          <step>9.39895e-05</step>
+        </variable>
+        <variable id="radius_04">
+          <value>20</value>
+        </variable>
+        <variable id="value_04">
+          <value>-1.69437</value>
+          <step>0.000473708</step>
+        </variable>
+        <variable id="radius_05">
+          <value>50</value>
+        </variable>
+        <variable id="value_05">
+          <value>-20</value>
+          <step>0.000245558</step>
+          <min>-20</min>
+          <max>20</max>
+          <prior>UNIFORM</prior>
+          <pval1>-20</pval1>
+          <pval2>20</pval2>
+        </variable>
+      </RadialProfile>
+      <RadialProfile intent="Norm3" type="Spline">
+        <name>Plane3Mode</name>
+        <interpolationType>CSPLINE</interpolationType>
+        <numberOfPoints>6</numberOfPoints>
+        <variable id="radius_00">
+          <value>0</value>
+        </variable>
+        <variable id="value_00">
+          <value>0.26564</value>
+          <step>0.000274292</step>
+        </variable>
+        <variable id="radius_01">
+          <value>5</value>
+        </variable>
+        <variable id="value_01">
+          <value>-0.0213707</value>
+          <step>3.76464e-05</step>
+        </variable>
+        <variable id="radius_02">
+          <value>10</value>
+        </variable>
+        <variable id="value_02">
+          <value>-0.00681474</value>
+          <step>3.12766e-05</step>
+        </variable>
+        <variable id="radius_03">
+          <value>15</value>
+        </variable>
+        <variable id="value_03">
+          <value>-0.00494624</value>
+          <step>7.17502e-05</step>
+        </variable>
+        <variable id="radius_04">
+          <value>20</value>
+        </variable>
+        <variable id="value_04">
+          <value>0.570304</value>
+          <step>0.000454656</step>
+        </variable>
+        <variable id="radius_05">
+          <value>50</value>
+        </variable>
+        <variable id="value_05">
+          <value>15.5518</value>
+          <step>0.0346376</step>
+          <min>-20</min>
+          <max>20</max>
+          <prior>UNIFORM</prior>
+          <pval1>-20</pval1>
+          <pval2>20</pval2>
+        </variable>
+      </RadialProfile>
+      <RadialProfile intent="Zero2" type="Constant">
+        <name>Zero2Plane</name>
+      </RadialProfile>
+      <RadialProfile intent="Zero3" type="Constant">
+        <name>Zero3Plane</name>
+      </RadialProfile>
+    </PlaneProfile>
+    <PlaneProfile intent="NorthScaleHeight" type="1Mode">
+      <name>ScaleHeight</name>
+      <variable id="norm">
+        <value>9.90944</value>
+        <step>0.00738603</step>
+        <min>0</min>
+        <name>CO_scale</name>
+      </variable>
+      <RadialProfile type="Exponential">
+        <name>ScaleRadial</name>
+        <variable id="R0">
+          <value>6.93695</value>
+          <step>0.000509431</step>
+          <min>0</min>
+          <max>50</max>
+          <prior>UNIFORM</prior>
+          <pval1>0</pval1>
+          <pval2>50</pval2>
+        </variable>
+        <variable id="RS">
+          <value>8.5</value>
+        </variable>
+      </RadialProfile>
+    </PlaneProfile>
+    <PlaneProfile intent="SouthScaleHeight" type="1Mode">
+      <name>ScaleHeight</name>
+      <variable id="norm">
+        <value>9.90944</value>
+        <step>0.00738603</step>
+        <min>0</min>
+        <name>CO_scale</name>
+      </variable>
+      <RadialProfile type="Exponential">
+        <name>ScaleRadial</name>
+        <variable id="R0">
+          <value>6.93695</value>
+          <step>0.000509431</step>
+          <min>0</min>
+          <max>50</max>
+          <prior>UNIFORM</prior>
+          <pval1>0</pval1>
+          <pval2>50</pval2>
+        </variable>
+        <variable id="RS">
+          <value>8.5</value>
+        </variable>
+      </RadialProfile>
+    </PlaneProfile>
+    <northScaleFunction>Sech2</northScaleFunction>
+    <southScaleFunction>Sech2</southScaleFunction>
+  </CylindricalProfile>
+
+  <CylindricalProfile type="Generic">
+    <name>Arm4</name>
+    <PlaneProfile intent="PlaneDensity" type="Arm">
+      <name>Arm4</name>
+      <armfunction>Gaussian</armfunction>
+      <variable id="norm">
+        <value>8.3478</value>
+        <step>0.0177625</step>
+        <min>0</min>
+        <name>CO_Arm4_norm</name>
+      </variable>
+      <variable id="a">
+        <value>4.72076</value>
+        <step>0.000164333</step>
+        <min>3</min>
+        <max>8</max>
+        <prior>UNIFORM</prior>
+        <pval1>3</pval1>
+        <pval2>8</pval2>
+      </variable>
+      <variable id="rMin">
+        <value>3.16184</value>
+        <step>0.000163141</step>
+        <min>1.5</min>
+        <max>5</max>
+        <prior>UNIFORM</prior>
+        <pval1>1.5</pval1>
+        <pval2>5</pval2>
+      </variable>
+      <variable id="phiMin">
+        <value>5.76</value>
+      </variable>
+      <variable id="width">
+        <value>0.6</value>
+      </variable>
+      <variable id="rMax">
+        <value>50</value>
+      </variable>
+      <RadialProfile type="ExpHole">
+        <name>CO_Radial</name>
+        <variable id="R0">
+          <value>1.12804</value>
+          <step>0.000725513</step>
+          <min>0</min>
+        </variable>
+        <variable id="Rs">
+          <value>8</value>
+        </variable>
+        <variable id="Rh">
+          <value>6.43578</value>
+          <step>0.00157097</step>
+          <min>0</min>
+        </variable>
+        <variable id="hi">
+          <value>7.30415</value>
+          <step>0.00698162</step>
+          <min>0</min>
+        </variable>
+      </RadialProfile>
+    </PlaneProfile>
+    <PlaneProfile intent="PlaneCenter" type="NMode">
+      <name>DiskPlane</name>
+      <numberOfModes>3</numberOfModes>
+      <variable id="norm1">
+        <value>1</value>
+      </variable>
+      <variable id="norm2">
+        <value>1</value>
+      </variable>
+      <variable id="norm3">
+        <value>1</value>
+      </variable>
+      <variable id="zero2">
+        <value>1.47548</value>
+        <step>0.000114543</step>
+        <min>-2</min>
+        <max>8</max>
+        <prior>UNIFORM</prior>
+        <pval1>-2</pval1>
+        <pval2>8</pval2>
+      </variable>
+      <variable id="zero3">
+        <value>2.76487</value>
+        <step>0.000592321</step>
+        <min>-2</min>
+        <max>8</max>
+        <prior>UNIFORM</prior>
+        <pval1>-2</pval1>
+        <pval2>8</pval2>
+      </variable>
+      <RadialProfile intent="Norm1" type="Spline">
+        <name>Plane1Mode</name>
+        <interpolationType>CSPLINE</interpolationType>
+        <numberOfPoints>6</numberOfPoints>
+        <variable id="radius_00">
+          <value>0</value>
+        </variable>
+        <variable id="value_00">
+          <value>-0.0631513</value>
+          <step>0.000149232</step>
+        </variable>
+        <variable id="radius_01">
+          <value>5</value>
+        </variable>
+        <variable id="value_01">
+          <value>-0.00767916</value>
+          <step>2.31444e-05</step>
+        </variable>
+        <variable id="radius_02">
+          <value>10</value>
+        </variable>
+        <variable id="value_02">
+          <value>-0.0285536</value>
+          <step>2.41105e-05</step>
+        </variable>
+        <variable id="radius_03">
+          <value>15</value>
+        </variable>
+        <variable id="value_03">
+          <value>0.0562734</value>
+          <step>6.75116e-05</step>
+        </variable>
+        <variable id="radius_04">
+          <value>20</value>
+        </variable>
+        <variable id="value_04">
+          <value>0.764476</value>
+          <step>0.000310787</step>
+        </variable>
+        <variable id="radius_05">
+          <value>50</value>
+        </variable>
+        <variable id="value_05">
+          <value>20</value>
+          <step>0.000143604</step>
+          <min>-20</min>
+          <max>20</max>
+          <prior>UNIFORM</prior>
+          <pval1>-20</pval1>
+          <pval2>20</pval2>
+        </variable>
+      </RadialProfile>
+      <RadialProfile intent="Norm2" type="Spline">
+        <name>Plane2Mode</name>
+        <interpolationType>CSPLINE</interpolationType>
+        <numberOfPoints>6</numberOfPoints>
+        <variable id="radius_00">
+          <value>0</value>
+        </variable>
+        <variable id="value_00">
+          <value>-0.117265</value>
+          <step>0.000239522</step>
+        </variable>
+        <variable id="radius_01">
+          <value>5</value>
+        </variable>
+        <variable id="value_01">
+          <value>0.0517391</value>
+          <step>4.08389e-05</step>
+        </variable>
+        <variable id="radius_02">
+          <value>10</value>
+        </variable>
+        <variable id="value_02">
+          <value>-0.101549</value>
+          <step>6.11337e-05</step>
+        </variable>
+        <variable id="radius_03">
+          <value>15</value>
+        </variable>
+        <variable id="value_03">
+          <value>-0.737641</value>
+          <step>9.39895e-05</step>
+        </variable>
+        <variable id="radius_04">
+          <value>20</value>
+        </variable>
+        <variable id="value_04">
+          <value>-1.69437</value>
+          <step>0.000473708</step>
+        </variable>
+        <variable id="radius_05">
+          <value>50</value>
+        </variable>
+        <variable id="value_05">
+          <value>-20</value>
+          <step>0.000245558</step>
+          <min>-20</min>
+          <max>20</max>
+          <prior>UNIFORM</prior>
+          <pval1>-20</pval1>
+          <pval2>20</pval2>
+        </variable>
+      </RadialProfile>
+      <RadialProfile intent="Norm3" type="Spline">
+        <name>Plane3Mode</name>
+        <interpolationType>CSPLINE</interpolationType>
+        <numberOfPoints>6</numberOfPoints>
+        <variable id="radius_00">
+          <value>0</value>
+        </variable>
+        <variable id="value_00">
+          <value>0.26564</value>
+          <step>0.000274292</step>
+        </variable>
+        <variable id="radius_01">
+          <value>5</value>
+        </variable>
+        <variable id="value_01">
+          <value>-0.0213707</value>
+          <step>3.76464e-05</step>
+        </variable>
+        <variable id="radius_02">
+          <value>10</value>
+        </variable>
+        <variable id="value_02">
+          <value>-0.00681474</value>
+          <step>3.12766e-05</step>
+        </variable>
+        <variable id="radius_03">
+          <value>15</value>
+        </variable>
+        <variable id="value_03">
+          <value>-0.00494624</value>
+          <step>7.17502e-05</step>
+        </variable>
+        <variable id="radius_04">
+          <value>20</value>
+        </variable>
+        <variable id="value_04">
+          <value>0.570304</value>
+          <step>0.000454656</step>
+        </variable>
+        <variable id="radius_05">
+          <value>50</value>
+        </variable>
+        <variable id="value_05">
+          <value>15.5518</value>
+          <step>0.0346376</step>
+          <min>-20</min>
+          <max>20</max>
+          <prior>UNIFORM</prior>
+          <pval1>-20</pval1>
+          <pval2>20</pval2>
+        </variable>
+      </RadialProfile>
+      <RadialProfile intent="Zero2" type="Constant">
+        <name>Zero2Plane</name>
+      </RadialProfile>
+      <RadialProfile intent="Zero3" type="Constant">
+        <name>Zero3Plane</name>
+      </RadialProfile>
+    </PlaneProfile>
+    <PlaneProfile intent="NorthScaleHeight" type="1Mode">
+      <name>ScaleHeight</name>
+      <variable id="norm">
+        <value>9.90944</value>
+        <step>0.00738603</step>
+        <min>0</min>
+        <name>CO_scale</name>
+      </variable>
+      <RadialProfile type="Exponential">
+        <name>ScaleRadial</name>
+        <variable id="R0">
+          <value>6.93695</value>
+          <step>0.000509431</step>
+          <min>0</min>
+          <max>50</max>
+          <prior>UNIFORM</prior>
+          <pval1>0</pval1>
+          <pval2>50</pval2>
+        </variable>
+        <variable id="RS">
+          <value>8.5</value>
+        </variable>
+      </RadialProfile>
+    </PlaneProfile>
+    <PlaneProfile intent="SouthScaleHeight" type="1Mode">
+      <name>ScaleHeight</name>
+      <variable id="norm">
+        <value>9.90944</value>
+        <step>0.00738603</step>
+        <min>0</min>
+        <name>CO_scale</name>
+      </variable>
+      <RadialProfile type="Exponential">
+        <name>ScaleRadial</name>
+        <variable id="R0">
+          <value>6.93695</value>
+          <step>0.000509431</step>
+          <min>0</min>
+          <max>50</max>
+          <prior>UNIFORM</prior>
+          <pval1>0</pval1>
+          <pval2>50</pval2>
+        </variable>
+        <variable id="RS">
+          <value>8.5</value>
+        </variable>
+      </RadialProfile>
+    </PlaneProfile>
+    <northScaleFunction>Sech2</northScaleFunction>
+    <southScaleFunction>Sech2</southScaleFunction>
+  </CylindricalProfile>
+
+  <CylindricalProfile type="Generic">
+    <name>CO_Disk</name>
+    <PlaneProfile intent="PlaneDensity" type="1Mode">
+      <name>CO_Density</name>
+      <variable id="norm">
+        <value>0.760479</value>
+        <step>0.0014864</step>
+        <min>1e-15</min>
+      </variable>
+      <RadialProfile type="ExpHole">
+        <name>CO_Radial</name>
+        <variable id="R0">
+          <value>1.12804</value>
+          <step>0.000725513</step>
+          <min>0</min>
+        </variable>
+        <variable id="Rs">
+          <value>8</value>
+        </variable>
+        <variable id="Rh">
+          <value>6.43578</value>
+          <step>0.00157097</step>
+          <min>0</min>
+        </variable>
+        <variable id="hi">
+          <value>7.30415</value>
+          <step>0.00698162</step>
+          <min>0</min>
+        </variable>
+      </RadialProfile>
+    </PlaneProfile>
+    <PlaneProfile intent="PlaneCenter" type="NMode">
+      <name>DiskPlane</name>
+      <numberOfModes>3</numberOfModes>
+      <variable id="norm1">
+        <value>1</value>
+      </variable>
+      <variable id="norm2">
+        <value>1</value>
+      </variable>
+      <variable id="norm3">
+        <value>1</value>
+      </variable>
+      <variable id="zero2">
+        <value>1.47548</value>
+        <step>0.000114543</step>
+        <min>-2</min>
+        <max>8</max>
+        <prior>UNIFORM</prior>
+        <pval1>-2</pval1>
+        <pval2>8</pval2>
+      </variable>
+      <variable id="zero3">
+        <value>2.76487</value>
+        <step>0.000592321</step>
+        <min>-2</min>
+        <max>8</max>
+        <prior>UNIFORM</prior>
+        <pval1>-2</pval1>
+        <pval2>8</pval2>
+      </variable>
+      <RadialProfile intent="Norm1" type="Spline">
+        <name>Plane1Mode</name>
+        <interpolationType>CSPLINE</interpolationType>
+        <numberOfPoints>6</numberOfPoints>
+        <variable id="radius_00">
+          <value>0</value>
+        </variable>
+        <variable id="value_00">
+          <value>-0.0631513</value>
+          <step>0.000149232</step>
+        </variable>
+        <variable id="radius_01">
+          <value>5</value>
+        </variable>
+        <variable id="value_01">
+          <value>-0.00767916</value>
+          <step>2.31444e-05</step>
+        </variable>
+        <variable id="radius_02">
+          <value>10</value>
+        </variable>
+        <variable id="value_02">
+          <value>-0.0285536</value>
+          <step>2.41105e-05</step>
+        </variable>
+        <variable id="radius_03">
+          <value>15</value>
+        </variable>
+        <variable id="value_03">
+          <value>0.0562734</value>
+          <step>6.75116e-05</step>
+        </variable>
+        <variable id="radius_04">
+          <value>20</value>
+        </variable>
+        <variable id="value_04">
+          <value>0.764476</value>
+          <step>0.000310787</step>
+        </variable>
+        <variable id="radius_05">
+          <value>50</value>
+        </variable>
+        <variable id="value_05">
+          <value>20</value>
+          <step>0.000143604</step>
+          <min>-20</min>
+          <max>20</max>
+          <prior>UNIFORM</prior>
+          <pval1>-20</pval1>
+          <pval2>20</pval2>
+        </variable>
+      </RadialProfile>
+      <RadialProfile intent="Norm2" type="Spline">
+        <name>Plane2Mode</name>
+        <interpolationType>CSPLINE</interpolationType>
+        <numberOfPoints>6</numberOfPoints>
+        <variable id="radius_00">
+          <value>0</value>
+        </variable>
+        <variable id="value_00">
+          <value>-0.117265</value>
+          <step>0.000239522</step>
+        </variable>
+        <variable id="radius_01">
+          <value>5</value>
+        </variable>
+        <variable id="value_01">
+          <value>0.0517391</value>
+          <step>4.08389e-05</step>
+        </variable>
+        <variable id="radius_02">
+          <value>10</value>
+        </variable>
+        <variable id="value_02">
+          <value>-0.101549</value>
+          <step>6.11337e-05</step>
+        </variable>
+        <variable id="radius_03">
+          <value>15</value>
+        </variable>
+        <variable id="value_03">
+          <value>-0.737641</value>
+          <step>9.39895e-05</step>
+        </variable>
+        <variable id="radius_04">
+          <value>20</value>
+        </variable>
+        <variable id="value_04">
+          <value>-1.69437</value>
+          <step>0.000473708</step>
+        </variable>
+        <variable id="radius_05">
+          <value>50</value>
+        </variable>
+        <variable id="value_05">
+          <value>-20</value>
+          <step>0.000245558</step>
+          <min>-20</min>
+          <max>20</max>
+          <prior>UNIFORM</prior>
+          <pval1>-20</pval1>
+          <pval2>20</pval2>
+        </variable>
+      </RadialProfile>
+      <RadialProfile intent="Norm3" type="Spline">
+        <name>Plane3Mode</name>
+        <interpolationType>CSPLINE</interpolationType>
+        <numberOfPoints>6</numberOfPoints>
+        <variable id="radius_00">
+          <value>0</value>
+        </variable>
+        <variable id="value_00">
+          <value>0.26564</value>
+          <step>0.000274292</step>
+        </variable>
+        <variable id="radius_01">
+          <value>5</value>
+        </variable>
+        <variable id="value_01">
+          <value>-0.0213707</value>
+          <step>3.76464e-05</step>
+        </variable>
+        <variable id="radius_02">
+          <value>10</value>
+        </variable>
+        <variable id="value_02">
+          <value>-0.00681474</value>
+          <step>3.12766e-05</step>
+        </variable>
+        <variable id="radius_03">
+          <value>15</value>
+        </variable>
+        <variable id="value_03">
+          <value>-0.00494624</value>
+          <step>7.17502e-05</step>
+        </variable>
+        <variable id="radius_04">
+          <value>20</value>
+        </variable>
+        <variable id="value_04">
+          <value>0.570304</value>
+          <step>0.000454656</step>
+        </variable>
+        <variable id="radius_05">
+          <value>50</value>
+        </variable>
+        <variable id="value_05">
+          <value>15.5518</value>
+          <step>0.0346376</step>
+          <min>-20</min>
+          <max>20</max>
+          <prior>UNIFORM</prior>
+          <pval1>-20</pval1>
+          <pval2>20</pval2>
+        </variable>
+      </RadialProfile>
+      <RadialProfile intent="Zero2" type="Constant">
+        <name>Zero2Plane</name>
+      </RadialProfile>
+      <RadialProfile intent="Zero3" type="Constant">
+        <name>Zero3Plane</name>
+      </RadialProfile>
+    </PlaneProfile>
+    <PlaneProfile intent="NorthScaleHeight" type="1Mode">
+      <name>ScaleHeight</name>
+      <variable id="norm">
+        <value>9.90944</value>
+        <step>0.00738603</step>
+        <min>0</min>
+        <name>CO_scale</name>
+      </variable>
+      <RadialProfile type="Exponential">
+        <name>ScaleRadial</name>
+        <variable id="R0">
+          <value>6.93695</value>
+          <step>0.000509431</step>
+          <min>0</min>
+          <max>50</max>
+          <prior>UNIFORM</prior>
+          <pval1>0</pval1>
+          <pval2>50</pval2>
+        </variable>
+        <variable id="RS">
+          <value>8.5</value>
+        </variable>
+      </RadialProfile>
+    </PlaneProfile>
+    <PlaneProfile intent="SouthScaleHeight" type="1Mode">
+      <name>ScaleHeight</name>
+      <variable id="norm">
+        <value>9.90944</value>
+        <step>0.00738603</step>
+        <min>0</min>
+        <name>CO_scale</name>
+      </variable>
+      <RadialProfile type="Exponential">
+        <name>ScaleRadial</name>
+        <variable id="R0">
+          <value>6.93695</value>
+          <step>0.000509431</step>
+          <min>0</min>
+          <max>50</max>
+          <prior>UNIFORM</prior>
+          <pval1>0</pval1>
+          <pval2>50</pval2>
+        </variable>
+        <variable id="RS">
+          <value>8.5</value>
+        </variable>
+      </RadialProfile>
+    </PlaneProfile>
+    <northScaleFunction>Sech2</northScaleFunction>
+    <southScaleFunction>Sech2</southScaleFunction>
+  </CylindricalProfile>
+
+  <CylindricalProfile type="GenericBar">
+    <name>Bar</name>
+    <variable id="phi">
+      <value>5.67</value>
+    </variable>
+    <variable id="alpha">
+      <value>0</value>
+    </variable>
+    <variable id="ySc">
+      <value>0.3</value>
+    </variable>
+    <variable id="rSc">
+      <value>0.100744</value>
+      <step>0.000515528</step>
+      <min>0.1</min>
+      <max>3.5</max>
+      <prior>UNIFORM</prior>
+      <pval1>0.1</pval1>
+      <pval2>3.5</pval2>
+    </variable>
+    <variable id="zSc">
+      <value>0.00116806</value>
+      <step>3.45336e-06</step>
+      <min>0</min>
+      <max>3.5</max>
+      <prior>UNIFORM</prior>
+      <pval1>0</pval1>
+      <pval2>3.5</pval2>
+      <name>CO_Bar_zcr</name>
+    </variable>
+    <variable id="ri">
+      <value>2</value>
+    </variable>
+    <variable id="zi">
+      <value>1</value>
+    </variable>
+    <variable id="x0">
+      <value>-0.578175</value>
+      <step>0.00602681</step>
+      <min>-3</min>
+      <max>3</max>
+      <prior>UNIFORM</prior>
+      <pval1>-3</pval1>
+      <pval2>3</pval2>
+    </variable>
+    <variable id="z0">
+      <value>0</value>
+    </variable>
+    <variable id="ei">
+      <value>0.442983</value>
+      <step>0.000115504</step>
+      <min>0</min>
+      <max>5</max>
+      <prior>UNIFORM</prior>
+      <pval1>0</pval1>
+      <pval2>5</pval2>
+    </variable>
+    <variable id="pi">
+      <value>0.711968</value>
+      <step>0.00128689</step>
+      <min>-5</min>
+      <max>5</max>
+      <prior>UNIFORM</prior>
+      <pval1>-5</pval1>
+      <pval2>5</pval2>
+    </variable>
+    <variable id="norm">
+      <value>145.332</value>
+      <step>0.630246</step>
+      <min>0</min>
+      <name>CO_Bar_norm</name>
+    </variable>
+  </CylindricalProfile>
+
+</model>
